@@ -2,9 +2,13 @@
 # ~/.config/qtile/config.py
 #
 
+import os
+import subprocess
+
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.lazy import lazy
 from libqtile import layout, bar, widget
+from libqtile.config import hook
 
 from typing import List  # noqa: F401
 
@@ -141,6 +145,14 @@ floating_layout = layout.Floating(float_rules=[
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
+
+# Hooks
+
+# Autostart applications
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~/.config/qtile/scripts/autostart.sh')
+    subprocess.call([home])
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
