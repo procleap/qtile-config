@@ -53,7 +53,7 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 ]
 
-groups = [Group(i) for i in "asdfuiop"]
+groups = [Group(str(i)) for i in range(1, 10)]
 
 for i in groups:
     keys.extend([
