@@ -35,6 +35,18 @@ keys = [
     Key([mod, "control"], "Up", lazy.layout.shuffle_up(),
         desc="Move window up in current stack "),
 
+    # MonadTall specific
+    Key([mod], "f", lazy.layout.flip(),
+        desc="Flip layout left/right "),
+    Key([mod], "i", lazy.layout.grow(),
+        desc="Increase window size "),
+    Key([mod], "m", lazy.layout.shrink(),
+        desc="Decrease window size "),
+    Key([mod], "n", lazy.layout.normalize(),
+        desc="Normalize (i.e. reset windows back to their regular size) "),
+    Key([mod], "o", lazy.layout.maximize(),
+        desc="Maximize window size "),
+
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next(),
         desc="Switch window focus to other pane(s) of stack"),
