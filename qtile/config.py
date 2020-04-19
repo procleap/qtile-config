@@ -136,7 +136,10 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.CurrentLayoutIcon(
+                    padding          = 5,
+                    scale            = 0.7,
+                ),
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
