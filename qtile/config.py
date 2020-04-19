@@ -45,9 +45,9 @@ keys = [
 
     # Move to next and previous workspaces/groups
     Key([mod, "control"], "Right", lazy.screen.next_group(),
-        desc="Move window up in current stack "),
+        desc="Move to the next workspace/group "),
     Key([mod, "control"], "Left", lazy.screen.prev_group(),
-        desc="Move window up in current stack "),
+        desc="Move to the previous workspace/group "),
 
     # MonadTall specific
     Key([mod], "f", lazy.layout.flip(),
