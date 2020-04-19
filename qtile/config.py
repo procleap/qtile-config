@@ -142,7 +142,12 @@ screens = [
                 widget.WindowName(),
                 widget.Systray(),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.QuickExit(),
+                widget.QuickExit(
+                    default_text     = '<span size="x-large"></span>',
+                    countdown_format = '<span size="x-large"></span>',
+                    font             = 'KoHo',
+                    padding          = 5
+                ),
             ],
             35,
             background = '#263238',
