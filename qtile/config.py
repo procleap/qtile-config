@@ -141,7 +141,14 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                widget.TextBox(
+                    text             = "",
+                    font             = 'KoHo'
+                ),
+                widget.Clock(
+                    format           = '%I:%M %p',
+                    padding          = 5
+                ),
                 widget.QuickExit(
                     default_text     = '<span size="x-large"></span>',
                     countdown_format = '<span size="x-large"></span>',
