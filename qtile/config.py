@@ -35,6 +35,14 @@ keys = [
     Key([mod, "control"], "Up", lazy.layout.shuffle_up(),
         desc="Move window up in current stack "),
 
+    # Volume controls
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +1%"),
+        desc="Increase volume "),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -1%"),
+        desc="Decrease volume "),
+    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"),
+        desc="Mute volume "),
+
     # Move to next and previous workspaces/groups
     Key([mod, "control"], "Right", lazy.screen.next_group(),
         desc="Move window up in current stack "),
