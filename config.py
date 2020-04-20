@@ -141,8 +141,11 @@ screens = [
     Screen(
         top=bar.Bar(
             [
+                widget.Sep(
+                    linewidth       = 0,
+                    padding         = 5,
+                ),
                 widget.CurrentLayoutIcon(
-                    padding          = 5,
                     scale            = 0.7,
                 ),
                 widget.GroupBox(),
@@ -161,7 +164,10 @@ screens = [
                     default_text     = '<span size="x-large"></span>',
                     countdown_format = '<span size="x-large"></span>',
                     font             = 'KoHo',
-                    padding          = 5
+                ),
+                widget.Sep(
+                    linewidth       = 0,
+                    padding         = 11,
                 ),
             ],
             35,
