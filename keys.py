@@ -83,4 +83,8 @@ keys = [
     # Launch command
     Key([mod], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
+
+    # Toggle window floating mode on/off
+    Key([mod], "p", lazy.window.toggle_floating(),
+        desc="Toggle window floating mode on/off "),
     ]
