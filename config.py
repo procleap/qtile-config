@@ -142,26 +142,26 @@ screens = [
         top=bar.Bar(
             [
                 widget.Sep(
-                    linewidth       = 0,
-                    padding         = 5,
+                    linewidth = 0,
+                    padding = 5,
                 ),
                 widget.CurrentLayoutIcon(
-                    scale            = 0.7,
+                    scale = 0.7,
                 ),
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Systray(),
                 widget.TextBox(
-                    text             = "",
-                    font             = 'KoHo'
+                    text = "",
+                    font = 'KoHo'
                 ),
                 widget.Clock(
-                    format           = '%I:%M %p',
+                    format = '%I:%M %p',
                 ),
                 widget.Sep(
-                    linewidth       = 0,
-                    padding         = 11,
+                    linewidth = 0,
+                    padding = 11,
                 ),
             ],
             35,
