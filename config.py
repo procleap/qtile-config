@@ -81,13 +81,18 @@ keys = [
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(),
         desc="Toggle between layouts"),
+
+    # Kill window
     Key([mod], "w", lazy.window.kill(),
         desc="Kill focused window"),
 
+    # Restart/exit Qtile
     Key([mod, "control"], "r", lazy.restart(),
         desc="Restart qtile"),
     Key([mod, "control"], "q", lazy.shutdown(),
         desc="Shutdown qtile"),
+
+    # Launch command
     Key([mod], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
 ]
