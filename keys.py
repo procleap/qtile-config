@@ -83,4 +83,4 @@ keys = [
     # Launch command
     Key([mod], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
-]
+    ]
