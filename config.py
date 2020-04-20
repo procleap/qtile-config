@@ -158,7 +158,6 @@ screens = [
                 ),
                 widget.Clock(
                     format           = '%I:%M %p',
-                    padding          = 5
                 ),
                 widget.Sep(
                     linewidth       = 0,
