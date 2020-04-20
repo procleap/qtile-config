@@ -144,6 +144,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
+        # Important: the Memory widget requires `python-psutil` to be installed
         top=bar.Bar(
             [
                 widget.Sep(
@@ -157,6 +158,21 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Systray(),
+                widget.Sep(
+                    linewidth = 0,
+                    padding = 7,
+                ),
+                widget.TextBox(
+                    text = "<span size='x-large'></span>",
+                    font = 'KoHo'
+                ),
+                widget.Memory(
+                    format = '{MemUsed}M'
+                ),
+                widget.Sep(
+                    linewidth = 0,
+                    padding = 7,
+                ),
                 widget.TextBox(
                     text = "",
                     font = 'KoHo'
