@@ -142,6 +142,11 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+def gpu_temp():
+    """ Get GPU temperature using nvidia-smi command """
+    cmd = ["/usr/bin/nvidia-smi", "--query-gpu=temperature.gpu", "--format=csv,noheader"]
+    return subprocess.check_output(cmd).decode('utf-8').strip() + "°C"
+
 screens = [
     Screen(
         # Important: the Memory and CPU widgets require `python-psutil` to be installed
@@ -181,6 +186,11 @@ screens = [
                 widget.ThermalSensor(
                     tag_sensor = 'Package id 0', # CPU
                     threshold = 75,
+                ),
+                widget.GenPollText(
+                    fmt = 'GPU {}',
+                    func = gpu_temp,
+                    update_interval = 1,
                 ),
                 widget.TextBox("NVME"),
                 widget.ThermalSensor(
