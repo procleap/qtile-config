@@ -75,9 +75,9 @@ keys = [
         desc="Kill focused window"),
 
     # Restart/exit Qtile
-    Key([mod, "control"], "r", lazy.restart(),
+    Key([mod, "shift"], "r", lazy.restart(),
         desc="Restart qtile"),
-    Key([mod, "control"], "q", lazy.shutdown(),
+    Key([mod, "shift"], "q", lazy.shutdown(),
         desc="Shutdown qtile"),
 
     # Launch command
