@@ -174,6 +174,24 @@ screens = [
                     padding = 7,
                 ),
                 widget.TextBox(
+                    text = "<span size='large'></span>",
+                    font = 'KoHo'
+                ),
+                widget.TextBox("CPU"),
+                widget.ThermalSensor(
+                    tag_sensor = 'Package id 0', # CPU
+                    threshold = 75,
+                ),
+                widget.TextBox("NVME"),
+                widget.ThermalSensor(
+                    tag_sensor = 'Sensor 2', # NVME
+                    threshold = 75,
+                ),
+                widget.Sep(
+                    linewidth = 0,
+                    padding = 7,
+                ),
+                widget.TextBox(
                     text = "<span size='x-large'></span>",
                     font = 'KoHo'
                 ),
