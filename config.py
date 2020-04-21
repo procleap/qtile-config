@@ -34,12 +34,12 @@ for i in groups:
 
 layouts = [
     layout.MonadTall(
-        margin     = 10,
-        ratio      = 0.6
+        margin=10,
+        ratio=0.6
     ),
     layout.Max(),
     layout.Stack(
-        num_stacks = 2
+        num_stacks=2
     ),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
@@ -65,7 +65,7 @@ screens = [
         top=bar.Bar(
             bar_widgets,
             35,
-            background = '#263238',
+            background='#263238',
         ),
     ),
 ]
@@ -98,8 +98,8 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'confirmreset'}, # gitk
     {'wmclass': 'makebranch'},   # gitk
     {'wmclass': 'maketag'},      # gitk
-    {'wname'  : 'branchdialog'}, # gitk
-    {'wname'  : 'pinentry'},     # GPG key password entry
+    {'wname': 'branchdialog'},   # gitk
+    {'wname': 'pinentry'},       # GPG key password entry
     {'wmclass': 'ssh-askpass'},  # ssh-askpass
     {'wmclass': 'keepass2'},     # KeePass
 ])
@@ -113,6 +113,7 @@ focus_on_window_activation = "smart"
 def autostart():
     home = os.path.expanduser('~/.config/qtile/scripts/autostart.sh')
     subprocess.call([home])
+
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the

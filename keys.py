@@ -91,4 +91,4 @@ keys = [
     # Toggle window floating mode on/off
     Key([mod], "p", lazy.window.toggle_floating(),
         desc="Toggle window floating mode on/off "),
-    ]
+]
