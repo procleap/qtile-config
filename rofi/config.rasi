@@ -1,0 +1,10 @@
+configuration {
+    modi: "run,drun";
+    lines: 7;
+    columns: 2;
+    display-run: ""; // Eye symbol from KoHo font: U+E8F4
+    display-drun: ""; // Eye symbol from KoHo font: U+E8F4
+    font: "Fira Code Medium 12";
+    show-icons: true;
+    theme: "~/.config/qtile/rofi/theme.rasi";
+}
