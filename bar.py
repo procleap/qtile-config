@@ -9,13 +9,9 @@ def gpu_temp():
     return subprocess.check_output(cmd).decode('utf-8').strip() + "°C"
 
 
-def get_volume_level():
-    """  """
-    cmd = ["/usr/bin/pamixer", "--get-volume"]
-    return subprocess.check_output(cmd).decode('utf-8').strip()
-
-
-# Important: the Memory and CPU widgets require `python-psutil` to be installed
+# Widgets requirements:
+# - Both Memory and CPU  require `python-psutil` to be installed
+# - Volume requires amixer (from `alsa-utils`) to be installed
 bar_widgets = [
     widget.Sep(
         linewidth=0,
@@ -79,13 +75,10 @@ bar_widgets = [
     ),
     widget.TextBox(
         text="<span size='x-large'></span>",
-        #text = "   ",
         font='KoHo'
     ),
-    widget.GenPollText(
-        fmt='{}%',
-        func=get_volume_level,
-        update_interval=0.2,
+    widget.Volume(
+        step=5,
     ),
     widget.Sep(
         linewidth=0,
