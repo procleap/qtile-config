@@ -84,9 +84,11 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(),
         desc="Shutdown qtile"),
 
-    # Launch command
-    Key([mod], "r", lazy.spawncmd(),
-        desc="Spawn a command using a prompt widget"),
+    # Launch command using rofi
+    Key([mod], "r", lazy.spawn("/usr/bin/rofi -show run -config ~/.config/qtile/rofi/config.rasi"),
+        desc="Spawn rofi in run mode"),
+    Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/config.rasi"),
+        desc="Spawn rofi in drun mode"),
 
     # Toggle window floating mode on/off
     Key([mod], "p", lazy.window.toggle_floating(),
