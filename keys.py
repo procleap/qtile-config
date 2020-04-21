@@ -32,8 +32,12 @@ keys = [
         desc="Mute volume "),
 
     # Move to next and previous workspaces/groups
+    Key([mod, "control"], "l", lazy.screen.next_group(),
+        desc="Move to the next workspace/group "),
     Key([mod, "control"], "Right", lazy.screen.next_group(),
         desc="Move to the next workspace/group "),
+    Key([mod, "control"], "h", lazy.screen.prev_group(),
+        desc="Move to the previous workspace/group "),
     Key([mod, "control"], "Left", lazy.screen.prev_group(),
         desc="Move to the previous workspace/group "),
 
