@@ -69,6 +69,7 @@ bar_widgets = [
         font='KoHo'
     ),
     widget.Volume(
+        volume_app='/usr/bin/pavucontrol',
         step=5,
     ),
     separator(7),
