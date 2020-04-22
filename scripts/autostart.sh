@@ -1,4 +1,4 @@
 #! /bin/bash
 
 nitrogen --restore &
-picom &
+picom --config ~/.config/qtile/picom/picom.cfg &
