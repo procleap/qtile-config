@@ -24,9 +24,9 @@ keys = [
         desc="Move window up in current stack "),
 
     # Volume controls
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("/usr/bin/pamixer --increase 5"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("/usr/bin/pamixer --increase 2"),
         desc="Increase volume "),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("/usr/bin/pamixer --decrease 5"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("/usr/bin/pamixer --decrease 2"),
         desc="Decrease volume "),
     Key([], "XF86AudioMute", lazy.spawn("/usr/bin/pamixer --toggle-mute"),
         desc="Mute volume "),
