@@ -21,7 +21,6 @@ bar_widgets = [
         scale=0.7,
     ),
     widget.GroupBox(),
-    widget.Prompt(),
     widget.WindowName(),
     widget.Sep(
         linewidth=0,
