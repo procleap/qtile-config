@@ -23,7 +23,6 @@ bar_widgets = [
     widget.GroupBox(),
     widget.Prompt(),
     widget.WindowName(),
-    widget.Systray(),
     widget.Sep(
         linewidth=0,
         padding=7,
@@ -80,6 +79,11 @@ bar_widgets = [
     widget.Volume(
         step=5,
     ),
+    widget.Sep(
+        linewidth=0,
+        padding=7,
+    ),
+    widget.Systray(),
     widget.Sep(
         linewidth=0,
         padding=7,
