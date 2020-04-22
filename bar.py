@@ -2,6 +2,14 @@ import subprocess
 from libqtile import widget
 
 
+def separator(padding):
+    """ Return a pre-customized separator widget """
+    return widget.Sep(
+        linewidth=0,
+        padding=padding,
+    )
+
+
 def gpu_temp():
     """ Get GPU temperature using nvidia-smi command """
     cmd = ["/usr/bin/nvidia-smi",
@@ -13,19 +21,13 @@ def gpu_temp():
 # - Both Memory and CPU  require `python-psutil` to be installed
 # - Volume requires amixer (from `alsa-utils`) to be installed
 bar_widgets = [
-    widget.Sep(
-        linewidth=0,
-        padding=5,
-    ),
+    separator(5),
     widget.CurrentLayoutIcon(
         scale=0.7,
     ),
     widget.GroupBox(),
     widget.WindowName(),
-    widget.Sep(
-        linewidth=0,
-        padding=7,
-    ),
+    separator(7),
     widget.TextBox(
         text='<span size="x-large"></span>',
         font='KoHo'
@@ -33,10 +35,7 @@ bar_widgets = [
     widget.CPU(
         format='{load_percent}%'
     ),
-    widget.Sep(
-        linewidth=0,
-        padding=7,
-    ),
+    separator(7),
     widget.TextBox(
         text="<span size='large'></span>",
         font='KoHo'
@@ -56,10 +55,7 @@ bar_widgets = [
         tag_sensor='Sensor 2',  # NVME
         threshold=75,
     ),
-    widget.Sep(
-        linewidth=0,
-        padding=7,
-    ),
+    separator(7),
     widget.TextBox(
         text="<span size='x-large'></span>",
         font='KoHo'
@@ -67,10 +63,7 @@ bar_widgets = [
     widget.Memory(
         format='{MemUsed}M'
     ),
-    widget.Sep(
-        linewidth=0,
-        padding=7,
-    ),
+    separator(7),
     widget.TextBox(
         text="<span size='x-large'></span>",
         font='KoHo'
@@ -78,10 +71,7 @@ bar_widgets = [
     widget.Volume(
         step=5,
     ),
-    widget.Sep(
-        linewidth=0,
-        padding=7,
-    ),
+    separator(7),
     widget.Systray(),
     widget.Sep(
         linewidth=0,
@@ -94,8 +84,5 @@ bar_widgets = [
     widget.Clock(
         format='%I:%M %p',
     ),
-    widget.Sep(
-        linewidth=0,
-        padding=11,
-    ),
+    separator(10),
 ]
