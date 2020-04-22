@@ -40,17 +40,17 @@ bar_widgets = [
         text="<span size='large'></span>",
         font='KoHo'
     ),
-    widget.TextBox("CPU"),
+    widget.TextBox("cpu"),
     widget.ThermalSensor(
         tag_sensor='Package id 0',  # CPU
         threshold=75,
     ),
     widget.GenPollText(
-        fmt='GPU {}',
+        fmt='gpu {}',
         func=gpu_temp,
         update_interval=1,
     ),
-    widget.TextBox("NVME"),
+    widget.TextBox("nvme"),
     widget.ThermalSensor(
         tag_sensor='Sensor 2',  # NVME
         threshold=75,
