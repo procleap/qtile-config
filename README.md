@@ -12,3 +12,4 @@ My qtile config (http://www.qtile.org)
 - python-psutil (Memory and CPU widgets)
 - alsa-utils (Volume widget)
 - pamixer
+- pavucontrol (launched by Volume widget when you right click on it)
