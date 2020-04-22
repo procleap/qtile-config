@@ -66,6 +66,7 @@ screens = [
             bar_widgets,
             35,
             background='#263238',
+            opacity=0.9,
         ),
     ),
 ]
