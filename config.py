@@ -35,7 +35,9 @@ for i in groups:
 layouts = [
     layout.MonadTall(
         margin=10,
-        ratio=0.6
+        ratio=0.6,
+        border_width=3,
+        single_border_width=3,
     ),
     layout.Max(),
     layout.Stack(
