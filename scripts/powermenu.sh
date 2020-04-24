@@ -32,7 +32,7 @@ LIGHT_BLUE="#039be5"
 LIGHT_GREEN="#7cb342"
 
 # Launch Rofi
-MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System' \
+MENU="$(/usr/bin/rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System' \
 -hide-scrollbar true \
 -bw 0 \
 -lines 4 \
@@ -52,6 +52,6 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System' \
 case "$MENU" in
   *Lock) echo "Lock" ;;
   *Logout) /usr/bin/qtile-cmd -o cmd -f shutdown ;;
-  *Reboot) systemctl reboot ;;
-  *Shutdown) systemctl -i poweroff
+  *Reboot) /usr/bin/systemctl reboot ;;
+  *Shutdown) /usr/bin/systemctl -i poweroff
 esac
