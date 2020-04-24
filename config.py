@@ -62,7 +62,8 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar(
+        top=bar.Gap(40),
+        bottom=bar.Bar(
             bar_widgets,
             35,
             background='#263238',
