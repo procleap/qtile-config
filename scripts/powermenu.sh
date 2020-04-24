@@ -51,7 +51,7 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System' \
 <<< "  Lock|  Logout|  Reboot|  Shutdown")"
 case "$MENU" in
   *Lock) echo "Lock" ;;
-  *Logout) echo "Logout";;
+  *Logout) /usr/bin/qtile-cmd -o cmd -f shutdown ;;
   *Reboot) systemctl reboot ;;
   *Shutdown) systemctl -i poweroff
 esac
