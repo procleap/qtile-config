@@ -1,5 +1,10 @@
+import os
+
 from libqtile.config import Key
 from libqtile.lazy import lazy
+
+# dynamically build path to powermenu.sh script
+powermenu = "/usr/bin/bash " + os.path.expanduser('~/.config/qtile/scripts/powermenu.sh')
 
 mod = "mod4"
 keys = [
@@ -89,6 +94,10 @@ keys = [
         desc="Spawn rofi in run mode"),
     Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/config.rasi"),
         desc="Spawn rofi in drun mode"),
+
+    # Launch powermenu
+    Key([mod, "control"], "l", lazy.spawn(powermenu),
+        desc="Launch powermenu "),
 
     # Toggle window floating mode on/off
     Key([mod], "p", lazy.window.toggle_floating(),
