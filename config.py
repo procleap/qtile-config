@@ -40,9 +40,7 @@ layouts = [
         single_border_width=3,
     ),
     layout.Max(),
-    layout.Stack(
-        num_stacks=2
-    ),
+    #layout.Stack(),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
     # layout.Columns(),
