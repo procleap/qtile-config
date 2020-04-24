@@ -15,7 +15,7 @@ from typing import List  # noqa: F401
 from keys import keys, mod
 from bar import bar_widgets
 
-groups = [Group(str(i)) for i in range(1, 10)]
+groups = [Group(str(i)) for i in range(1, 5)]
 
 for i in groups:
     keys.extend([
