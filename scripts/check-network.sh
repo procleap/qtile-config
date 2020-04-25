@@ -8,8 +8,8 @@ ID="$(ip link | awk '/state UP/ {print $2}')"
 
 while true; do
     if (ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 github.com ) &>/dev/null; then
-        echo "$wireless_connected" ; sleep 25
+        echo "$wireless_connected"
     else
-        echo "$disconnected" ; sleep 0.5
+        echo "$disconnected"
     fi
 done
