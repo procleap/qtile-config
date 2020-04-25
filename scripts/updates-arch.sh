@@ -4,7 +4,7 @@
 # For Archlinux only. Requires`pacman-cotnrib` to be installed.
 #
 
-icon=" "
+icon=" "
 
 if ! updates=$(checkupdates 2> /dev/null | wc -l ); then
     updates=0
