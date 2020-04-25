@@ -13,7 +13,6 @@ from libqtile.config import hook
 from typing import List  # noqa: F401
 
 from keys import keys, mod
-from bar import bar_widgets
 
 groups = [Group(str(i)) for i in range(1, 5)]
 
@@ -52,13 +51,6 @@ layouts = [
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
-
-widget_defaults = dict(
-    font='sans',
-    fontsize=14,
-    padding=3,
-)
-extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
