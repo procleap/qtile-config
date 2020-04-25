@@ -13,3 +13,4 @@ My qtile config (http://www.qtile.org)
 - alsa-utils (Volume widget)
 - pamixer
 - pavucontrol (launched by Volume widget when you right click on it)
+- pacman-contrib (provides the `checkupdates` script)
