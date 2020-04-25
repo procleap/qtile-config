@@ -33,6 +33,7 @@ for i in groups:
 
 layouts = [
     layout.MonadTall(
+        border_focus='#7B1FA2',
         margin=10,
         ratio=0.6,
         border_width=3,
