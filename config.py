@@ -112,10 +112,15 @@ focus_on_window_activation = "smart"
 
 # Autostart applications
 @hook.subscribe.startup_once
-def autostart():
+def startup_once():
     home = os.path.expanduser('~/.config/qtile/scripts/autostart.sh')
     subprocess.call([home])
 
+# Restart polybar when Qtile is restarted
+@hook.subscribe.startup
+def startup():
+    home = os.path.expanduser('~/.config/qtile/polybar/launch.sh')
+    subprocess.call([home])
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
