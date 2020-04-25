@@ -62,13 +62,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Gap(40),
-        bottom=bar.Bar(
-            bar_widgets,
-            35,
-            background='#263238',
-            opacity=0.9,
-        ),
+        top=bar.Gap(40),  # reserve space for polybar.
     ),
 ]
 
