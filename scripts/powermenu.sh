@@ -35,7 +35,7 @@ LIGHT_GREEN="#7cb342"
 MENU="$(/usr/bin/rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System' \
 -hide-scrollbar true \
 -bw 0 \
--lines 4 \
+-lines 5 \
 -line-padding 10 \
 -padding 20 \
 -width 8 \
@@ -48,10 +48,11 @@ MENU="$(/usr/bin/rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System' \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< "  Lock|  Logout|  Reboot|  Shutdown")"
+<<< "  Lock|  Logout|  Suspend|  Reboot|  Shutdown")"
 case "$MENU" in
   *Lock) /usr/bin/betterlockscreen -l dim ;;
   *Logout) /usr/bin/qtile-cmd -o cmd -f shutdown ;;
+  *Suspend) /usr/bin/systemctl suspend ;;
   *Reboot) /usr/bin/systemctl reboot ;;
   *Shutdown) /usr/bin/systemctl -i poweroff
 esac
