@@ -50,7 +50,7 @@ MENU="$(/usr/bin/rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System' \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 <<< "  Lock|  Logout|  Reboot|  Shutdown")"
 case "$MENU" in
-  *Lock) echo "Lock" ;;
+  *Lock) /usr/bin/betterlockscreen -l dim ;;
   *Logout) /usr/bin/qtile-cmd -o cmd -f shutdown ;;
   *Reboot) /usr/bin/systemctl reboot ;;
   *Shutdown) /usr/bin/systemctl -i poweroff
