@@ -4,4 +4,4 @@
 /usr/bin/xfce4-power-manager &
 /usr/bin/picom --config ~/.config/qtile/picom/picom.cfg &
 /usr/bin/bash ~/.config/qtile/polybar/launch.sh &
-
+/usr/bin/xss-lock ~/.config/qtile/scripts/sleep-lock.sh &
