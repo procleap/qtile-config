@@ -11,4 +11,5 @@ My qtile config (http://www.qtile.org)
 - nvidia-utils (provides the nvidia-smi command for polling GPU temperature)
 - pamixer
 - pacman-contrib (provides the `checkupdates` script)
-- Optional: [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
+- xss-lock
+- betterlockscreen (via [github](https://github.com/pavanjadhaw/betterlockscreen) or [AUR](https://aur.archlinux.org/packages/betterlockscreen))
