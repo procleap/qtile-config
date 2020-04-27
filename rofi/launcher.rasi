@@ -1,8 +1,7 @@
 configuration {
-    modi: "run,drun";
+    modi: "drun";
     lines: 7;
     columns: 2;
-    display-run: "";  /* Eye symbol from Iosevka font: U+E8F4 */
     display-drun: ""; /* Empty circle: U+F8DC */
     font: "SF Pro Text Medium 12";
     show-icons: true;
