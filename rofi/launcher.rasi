@@ -3,10 +3,9 @@ configuration {
     lines: 7;
     columns: 2;
     display-run: "";  /* Eye symbol from Iosevka font: U+E8F4 */
-    display-drun: ""; /* Eye symbol from Iosevka font: U+E8F4 */s
+    display-drun: ""; /* Eye symbol from Iosevka font: U+E8F4 */
     font: "SF Pro Text Medium 12";
     show-icons: true;
-    theme: "~/.config/qtile/rofi/theme.rasi";
 }
 
 * {
