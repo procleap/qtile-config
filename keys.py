@@ -90,9 +90,9 @@ keys = [
         desc="Shutdown qtile"),
 
     # Launch command using rofi
-    Key([mod], "r", lazy.spawn("/usr/bin/rofi -show run -config ~/.config/qtile/rofi/config.rasi"),
+    Key([mod], "r", lazy.spawn("/usr/bin/rofi -show run -config ~/.config/qtile/rofi/launcher.rasi"),
         desc="Spawn rofi in run mode"),
-    Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/config.rasi"),
+    Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/launcher.rasi"),
         desc="Spawn rofi in drun mode"),
 
     # Launch powermenu
