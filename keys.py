@@ -89,9 +89,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(),
         desc="Shutdown qtile"),
 
-    # Launch command using rofi
-    Key([mod], "r", lazy.spawn("/usr/bin/rofi -show run -config ~/.config/qtile/rofi/launcher.rasi"),
-        desc="Spawn rofi in run mode"),
+    # Launch command using rofir
     Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/launcher.rasi"),
         desc="Spawn rofi in drun mode"),
 
