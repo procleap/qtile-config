@@ -13,3 +13,4 @@ My qtile config (http://www.qtile.org)
 - pacman-contrib (provides the `checkupdates` script)
 - xss-lock
 - betterlockscreen (via [github](https://github.com/pavanjadhaw/betterlockscreen) or [AUR](https://aur.archlinux.org/packages/betterlockscreen))
+- polybar
