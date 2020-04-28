@@ -1,3 +1,5 @@
+import os
+
 from libqtile.config import ScratchPad, DropDown, Key
 from libqtile.command import lazy
 
@@ -6,7 +8,8 @@ class QuakeTerm():
 
     def init_quaketerm(self):
         # Terminal
-        terminal = "alacritty"
+        startup_script = os.path.expanduser('~/.config/qtile/scripts/quake.sh')
+        terminal = "alacritty -e sh " + startup_script
 
         # Configuration
         height = 0.6
