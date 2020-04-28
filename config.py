@@ -14,7 +14,7 @@ from typing import List  # noqa: F401
 
 from keys import keys, mod
 
-groups = [Group(str(i)) for i in range(1, 5)]
+groups = [Group(str(i)) for i in range(1, 6)]
 
 for i in groups:
     keys.extend([
