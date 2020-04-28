@@ -13,6 +13,7 @@ from libqtile.config import hook
 from typing import List  # noqa: F401
 
 from keys import keys, mod
+from quake import QuakeTerm, QuakeKey
 
 groups = [Group(str(i)) for i in range(1, 6)]
 
@@ -52,6 +53,12 @@ layouts = [
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
+
+# Append Quake terminal and key binding to groups and keys respectively.
+quake_term = QuakeTerm()
+quake_key = QuakeKey()
+groups += quake_term.init_quaketerm()
+keys += quake_key.init_quake_keybinding()
 
 screens = [
     Screen(
