@@ -13,7 +13,7 @@ class QuakeTerm():
 
         # Configuration
         height = 0.6
-        width=0.5
+        width = 0.5
         x_position = 0.25
         y_position = 0
         warp_pointer = False
