@@ -43,7 +43,7 @@ layouts = [
         min_ratio=0.2,
     ),
     layout.Max(),
-    #layout.Stack(),
+    # layout.Stack(),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
     # layout.Columns(),
@@ -117,6 +117,7 @@ def startup_once():
 def startup():
     home = os.path.expanduser('~/.config/qtile/polybar/launch.sh')
     subprocess.call([home])
+
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
