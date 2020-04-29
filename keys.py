@@ -76,6 +76,10 @@ keys = [
     Key([mod], "f", lazy.window.toggle_floating(),
         desc="Toggle window floating mode on/off "),
 
+    # Toggle window fullscreen on/off
+    Key([mod], "p", lazy.window.toggle_fullscreen(),
+        desc="Toggle window fullscreen on/off "),
+
     #
     # Application launchers
     #
