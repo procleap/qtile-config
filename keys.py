@@ -58,9 +58,6 @@ keys = [
     Key([mod], "space", lazy.layout.next(),
         desc="Switch window focus to other pane(s) of stack"),
 
-    Key([mod], "Return", lazy.spawn("alacritty"),
-        desc="Launch terminal"),
-
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(),
         desc="Toggle between layouts"),
@@ -75,15 +72,23 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(),
         desc="Shutdown qtile"),
 
-    # Launch command using rofir
-    Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/launcher.rasi"),
-        desc="Spawn rofi in drun mode"),
-
-    # Launch powermenu
-    Key([mod, "control"], "l", lazy.spawn(powermenu),
-        desc="Launch powermenu "),
-
     # Toggle window floating mode on/off
     Key([mod], "p", lazy.window.toggle_floating(),
         desc="Toggle window floating mode on/off "),
+
+    #
+    # Application launchers
+    #
+
+    # Terminal
+    Key([mod], "Return", lazy.spawn("alacritty"),
+        desc="Launch terminal"),
+
+    # Powermenu
+    Key([mod, "control"], "l", lazy.spawn(powermenu),
+        desc="Launch powermenu "),
+
+    # Rofi launcher
+    Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/launcher.rasi"),
+        desc="Spawn rofi in drun mode"),
 ]
