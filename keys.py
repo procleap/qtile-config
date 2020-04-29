@@ -43,7 +43,7 @@ keys = [
         desc="Move to the previous workspace/group "),
 
     # MonadTall specific
-    Key([mod, "control"], "f", lazy.layout.flip(),
+    Key([mod, "control"], "space", lazy.layout.flip(),
         desc="Flip layout left/right "),
     Key([mod], "i", lazy.layout.grow(),
         desc="Increase window size "),
