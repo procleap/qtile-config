@@ -88,6 +88,10 @@ keys = [
     Key([mod], "Return", lazy.spawn("alacritty"),
         desc="Launch terminal"),
 
+    # File manager
+    Key([mod], "s", lazy.spawn("thunar"),
+        desc="Launch file manager "),
+
     # Powermenu
     Key([mod, "control"], "l", lazy.spawn(powermenu),
         desc="Launch powermenu "),
