@@ -21,7 +21,7 @@ class QuakeTerm():
         opacity = 1
 
         return [
-            ScratchPad("Quake",
+            ScratchPad("quake",
                        dropdowns=[
                            # Drop down terminal with tmux session
                            DropDown("term",
@@ -42,5 +42,5 @@ class QuakeKey():
     def init_quake_keybinding(self):
         return [
             Key([], "F12",
-                lazy.group["Quake"].dropdown_toggle("term")),
+                lazy.group["quake"].dropdown_toggle("term")),
         ]
