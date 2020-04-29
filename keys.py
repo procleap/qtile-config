@@ -73,11 +73,11 @@ keys = [
         desc="Shutdown qtile"),
 
     # Toggle window floating mode on/off
-    Key([mod], "f", lazy.window.toggle_floating(),
+    Key([mod, "control"], "f", lazy.window.toggle_floating(),
         desc="Toggle window floating mode on/off "),
 
     # Toggle window fullscreen on/off
-    Key([mod], "p", lazy.window.toggle_fullscreen(),
+    Key([mod], "f", lazy.window.toggle_fullscreen(),
         desc="Toggle window fullscreen on/off "),
 
     #
