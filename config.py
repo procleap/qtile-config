@@ -39,6 +39,8 @@ layouts = [
         ratio=0.6,
         border_width=3,
         single_border_width=3,
+        max_ratio=0.8,
+        min_ratio=0.2,
     ),
     layout.Max(),
     #layout.Stack(),
