@@ -21,7 +21,7 @@ for i in groups:
     keys.extend([
         # Switch to & move focused window to group
         Key([mod], i.name, lazy.window.togroup(i.name, switch_group=True),
-            desc="Switch to & move focused window to group {}".format(i.name)),
+            desc="Switch to & move focused window to group {} ".format(i.name)),
 
         # Move focused window to group
         Key([mod, "control"], i.name, lazy.window.togroup(i.name),
