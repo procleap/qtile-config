@@ -83,24 +83,28 @@ main = None
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(float_rules=[
-    # Run the utility of `xprop` to see the wm class and name of an X client.
-    {'wmclass': 'confirm'},
-    {'wmclass': 'dialog'},
-    {'wmclass': 'download'},
-    {'wmclass': 'error'},
-    {'wmclass': 'file_progress'},
-    {'wmclass': 'notification'},
-    {'wmclass': 'splash'},
-    {'wmclass': 'toolbar'},
-    {'wmclass': 'confirmreset'},  # gitk
-    {'wmclass': 'makebranch'},    # gitk
-    {'wmclass': 'maketag'},       # gitk
-    {'wname': 'branchdialog'},    # gitk
-    {'wname': 'pinentry'},        # GPG key password entry
-    {'wmclass': 'ssh-askpass'},   # ssh-askpass
-    {'wmclass': 'keepass2'},      # KeePass
-])
+floating_layout = layout.Floating(
+    float_rules=[
+        # Run the utility of `xprop` to see the wm class and name of an X client.
+        {'wmclass': 'confirm'},
+        {'wmclass': 'dialog'},
+        {'wmclass': 'download'},
+        {'wmclass': 'error'},
+        {'wmclass': 'file_progress'},
+        {'wmclass': 'notification'},
+        {'wmclass': 'splash'},
+        {'wmclass': 'toolbar'},
+        {'wmclass': 'confirmreset'},  # gitk
+        {'wmclass': 'makebranch'},    # gitk
+        {'wmclass': 'maketag'},       # gitk
+        {'wname': 'branchdialog'},    # gitk
+        {'wname': 'pinentry'},        # GPG key password entry
+        {'wmclass': 'ssh-askpass'},   # ssh-askpass
+        {'wmclass': 'keepass2'},      # KeePass
+    ],
+    border_focus='#7B1FA2',
+    border_width=3,
+)
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 
