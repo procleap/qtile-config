@@ -96,6 +96,10 @@ keys = [
     Key([mod, "control"], "l", lazy.spawn(powermenu),
         desc="Launch powermenu "),
 
+    # Flameshot
+    Key([], "Print", lazy.spawn("flameshot gui"),
+        desc="Launch flameshot "),
+
     # Rofi launcher
     Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/launcher.rasi"),
         desc="Spawn rofi in drun mode"),
