@@ -3,8 +3,9 @@ import os
 from libqtile.config import Key
 from libqtile.lazy import lazy
 
-# dynamically build path to powermenu.sh script
+# dynamically build path to scripts
 powermenu = "/usr/bin/bash " + os.path.expanduser('~/.config/qtile/scripts/powermenu.sh')
+launcher = "/usr/bin/bash " + os.path.expanduser('~/.config/qtile/scripts/launcher.sh')
 
 mod = "mod4"
 keys = [
@@ -101,6 +102,6 @@ keys = [
         desc="Launch flameshot "),
 
     # Rofi launcher
-    Key([mod], "d", lazy.spawn("/usr/bin/rofi -show drun -config ~/.config/qtile/rofi/launcher.rasi"),
+    Key([mod], "d", lazy.spawn(launcher),
         desc="Spawn rofi in drun mode"),
 ]
