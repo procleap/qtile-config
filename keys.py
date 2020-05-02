@@ -4,20 +4,22 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 
 # dynamically build path to scripts
-powermenu = "/usr/bin/bash " + os.path.expanduser('~/.config/qtile/scripts/powermenu.sh')
-launcher = "/usr/bin/bash " + os.path.expanduser('~/.config/qtile/scripts/launcher.sh')
-
+powermenu = "/usr/bin/bash " + \
+    os.path.expanduser('~/.config/qtile/scripts/powermenu.sh')
+launcher = "/usr/bin/bash " + \
+    os.path.expanduser('~/.config/qtile/scripts/launcher.sh')
 mod = "mod4"
+
 keys = [
     # Switch between windows in current stack pane
     Key([mod], "k", lazy.layout.down(),
-        desc="Move focus down in stack pane"),
+        desc="Move focus down in stack pane "),
     Key([mod], "Down", lazy.layout.down(),
-        desc="Move focus down in stack pane"),
+        desc="Move focus down in stack pane "),
     Key([mod], "j", lazy.layout.up(),
-        desc="Move focus up in stack pane"),
+        desc="Move focus up in stack pane "),
     Key([mod], "Up", lazy.layout.up(),
-        desc="Move focus up in stack pane"),
+        desc="Move focus up in stack pane "),
 
     # Move windows up or down in current stack
     Key([mod, "control"], "k", lazy.layout.shuffle_down(),
@@ -57,21 +59,21 @@ keys = [
 
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next(),
-        desc="Switch window focus to other pane(s) of stack"),
+        desc="Switch window focus to other pane(s) of stack "),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(),
-        desc="Toggle between layouts"),
+        desc="Toggle between layouts "),
 
     # Kill window
     Key([mod], "w", lazy.window.kill(),
-        desc="Kill focused window"),
+        desc="Kill focused window "),
 
     # Restart/exit Qtile
     Key([mod, "control"], "r", lazy.restart(),
         desc="Restart qtile"),
     Key([mod, "control"], "q", lazy.shutdown(),
-        desc="Shutdown qtile"),
+        desc="Shutdown qtile "),
 
     # Toggle window floating mode on/off
     Key([mod, "control"], "f", lazy.window.toggle_floating(),
@@ -103,5 +105,5 @@ keys = [
 
     # Rofi launcher
     Key([mod], "d", lazy.spawn(launcher),
-        desc="Spawn rofi in drun mode"),
+        desc="Spawn rofi in drun mode "),
 ]
